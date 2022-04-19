@@ -1,5 +1,5 @@
 import { useState } from "react";
-import ReactDOM from "react-dom";
+import { createRoot } from 'react-dom/client';
 
 function SignUp() {
   const [inputs, setInputs] = useState({});
@@ -23,7 +23,7 @@ function SignUp() {
                     <div className="form-items">
                         <h3>Register Today</h3>
                         <p>Fill in the data below.</p>
-                        <form className="requires-validation" novalidate>
+                        <form className="requires-validation" noValidate>
 
                             <div className="col-md-12">
                                 <input 
@@ -53,8 +53,8 @@ function SignUp() {
 
                         <div className="col-md-12">
                                 <select className="form-select mt-3" required>
-                                    <option selected disabled value="">Position</option>
-                                    <option value="jweb">Stockholmr</option>
+                                    <option defaultValue disabled value="">Position</option>
+                                    <option value="jweb">Stockholm</option>
                                     <option value="sweb">Uppsala</option>
                                     <option value="pmanager">Gävle</option>
                             </select>
@@ -78,35 +78,35 @@ function SignUp() {
 
 
                         <div className="col-md-12 mt-3">
-                            <label className="mb-3 mr-1" for="gender">Gender: </label>
+                            <label className="mb-3 mr-1" htmlFor="gender">Gender: </label>
                             
                             {/*No JS here*/}
                             <input 
                                 type="radio" 
-                                class="btn-check" 
+                                className="btn-check" 
                                 name="gender" 
                                 id="male" 
-                                autocomplete="off" 
+                                autoComplete="off" 
                                 required/>
-                            <label className="btn btn-sm btn-outline-secondary" for="male">Male</label>
+                            <label className="btn btn-sm btn-outline-secondary" htmlFor="male">Male</label>
 
                             <input 
                                 type="radio" 
-                                class="btn-check" 
+                                className="btn-check" 
                                 name="gender" 
                                 id="female" 
-                                autocomplete="off" 
+                                autoComplete="off" 
                                 required/>
-                            <label className="btn btn-sm btn-outline-secondary" for="female">Female</label>
+                            <label className="btn btn-sm btn-outline-secondary" htmlFor="female">Female</label>
 
                             <input 
                                 type="radio" 
-                                class="btn-check" 
+                                className="btn-check" 
                                 name="gender" 
                                 id="secret" 
-                                autocomplete="off" 
+                                autoComplete="off" 
                                 required/>
-                            <label className="btn btn-sm btn-outline-secondary" for="secret">Secret</label>
+                            <label className="btn btn-sm btn-outline-secondary" htmlFor="secret">Secret</label>
                             <div className="valid-feedback mv-up">You selected a gender!</div>
                                 <div className="invalid-feedback mv-up">Please select a gender!</div>
                             </div>
@@ -124,7 +124,7 @@ function SignUp() {
                 
 
                             <div className="form-button mt-3">
-                                <button id="submit" type="submit" class="btn btn-primary">Register</button>
+                                <button id="submit" type="submit" className="btn btn-primary">Register</button>
                             </div>
                         </form>
                     </div>
@@ -134,5 +134,5 @@ function SignUp() {
     </div>
   )
 }
-ReactDOM.render(<SignUp />, document.getElementById('root'));
+
 export default SignUp;

@@ -1,4 +1,5 @@
 import { Outlet, Link } from "react-router-dom";
+import { createRoot } from 'react-dom/client';
 
 const Layout = () => {
   return (
@@ -8,7 +9,7 @@ const Layout = () => {
             <nav className="navbar navbar-dark navbar-expand-md navigation-clean-search">
                 <div className="container">
                   <a className="navbar-brand" href="/" >Support</a>
-                  <button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1">
+                  <button className="navbar-toggler" data-toggle="collapse" data-target="#navcol-1">
                     <span className="sr-only">Toggle navigation</span>
                     <span className="navbar-toggler-icon"></span>
                     </button>
@@ -29,7 +30,7 @@ const Layout = () => {
                         </ul>
                         <form className="form-inline mr-auto" target="_self">
                             <div className="form-group">
-                              <label for="search-field">
+                              <label htmlFor="search-field">
                                 <i className="fa fa-search"></i>
                                 </label>
                                 <input className="form-control search-field" type="search" name="search" id="search-field"/>
@@ -41,6 +42,7 @@ const Layout = () => {
                           </span>
                           <a className="btn btn-light action-button" role="button" href="./SignUp">Sign Up</a>
                         </div>
+                        <a className="navbar-text" href="./MyProfile" >My Profile</a>
                     </div>
                 </div>
             </nav>

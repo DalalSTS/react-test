@@ -1,5 +1,5 @@
 import { useState } from "react";
-import ReactDOM from "react-dom";
+import { createRoot } from 'react-dom/client';
 
 function LogIn() {
   const [inputs, setInputs] = useState({});
@@ -16,14 +16,14 @@ function LogIn() {
   }
 
   return (
-    <div classNam="form-body">
+    <div className="form-body">
         <div className="row">
             <div className="form-holder">
                 <div className="form-content">
                     <div className="form-items">
                         <h3>Welcome Back!</h3>
                         <p>LogIn Here</p>
-                        <form className="requires-validation" novalidate>
+                        <form className="requires-validation" noValidate>
 
                             
 
@@ -65,7 +65,7 @@ function LogIn() {
                 
 
                             <div className="form-button mt-3">
-                                <button id="submit" type="submit" class="btn btn-primary">Register</button>
+                                <button id="submit" type="submit" className="btn btn-primary">Register</button>
                             </div>
                         </form>
                     </div>
@@ -76,5 +76,5 @@ function LogIn() {
   )
 }
 
-ReactDOM.render(<LogIn />, document.getElementById('root'));
+
 export default LogIn;
