@@ -42,8 +42,10 @@ const Layout = () => {
                           </span>
                           <a className="btn btn-light action-button" role="button" href="./SignUp">Sign Up</a>
                         </div>
-                        <a className="navbar-text" href="./MyProfile" >My Profile</a>
                     </div>
+                    <a className="navbar-text float-right" href="./MyProfile" >My Profile</a>
+                    <a className="navbar-brand float-right" href="./MatchPage" >MatchPage</a>
+
                 </div>
             </nav>
             

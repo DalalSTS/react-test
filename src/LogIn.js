@@ -65,7 +65,7 @@ function LogIn() {
                 
 
                             <div className="form-button mt-3">
-                                <button id="submit" type="submit" className="btn btn-primary">Register</button>
+                                <button id="submit" type="submit" onClick={handleSubmit} className="btn btn-primary">Register</button>
                             </div>
                         </form>
                     </div>

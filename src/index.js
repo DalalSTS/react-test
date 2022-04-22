@@ -1,5 +1,5 @@
 import { createRoot } from 'react-dom/client';
-
+import React, { Component }  from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './index.css';
 import Layout from "./Layout";
@@ -7,10 +7,12 @@ import Home from "./Home";
 import SignUp from "./SignUp";
 import LogIn from "./LogIn";
 import MyProfile from './MyProfile';
+import MatchPage from './MatchPage';
 //import NoPage from "./pages/NoPage";
 
 export default function App() {
   return (
+
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
@@ -18,6 +20,7 @@ export default function App() {
           <Route path="SignUp" element={<SignUp />} />
           <Route path="LogIn" element={<LogIn />} />
           <Route path='MyProfile' element={<MyProfile />} />
+          <Route path='MatchPage' element={<MatchPage />} />
         
         </Route>
       </Routes>

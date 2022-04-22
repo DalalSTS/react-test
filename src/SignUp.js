@@ -1,19 +1,27 @@
 import { useState } from "react";
 import { createRoot } from 'react-dom/client';
+import { useForm } from "react-hook-form";
+
 
 function SignUp() {
-  const [inputs, setInputs] = useState({});
+   const [inputs, setInputs] = useState({});
 
   const handleChange = (event) => {
     const name = event.target.name;
     const value = event.target.value;
-    setInputs(values => ({...values, [name]: value}))
-  }
+    setInputs(values =>{ return {...values, [name]: value}
+  })
+    
+    
+  };
 
+
+ 
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log(inputs);
   }
+  
 
   return (
     <div className="form-body">
@@ -29,10 +37,10 @@ function SignUp() {
                                 <input 
                                     className="form-control" 
                                     type="text" 
-                                    name="name" 
+                                    name="Name" 
                                     placeholder="Full Name" 
                                     required
-                                    value={inputs.name || ""} 
+                                    value={inputs.Name || ""} 
                                     onChange={handleChange} />
                                 <div className="valid-feedback">Username field is valid!</div>
                                 <div className="invalid-feedback">Username field cannot be blank!</div>
@@ -52,11 +60,15 @@ function SignUp() {
                             </div>
 
                         <div className="col-md-12">
-                                <select className="form-select mt-3" required>
-                                    <option defaultValue disabled value="">Position</option>
-                                    <option value="jweb">Stockholm</option>
-                                    <option value="sweb">Uppsala</option>
-                                    <option value="pmanager">Gävle</option>
+                                <select className="form-select mt-3" 
+                                name="position"
+                                value={inputs.position || inputs.value} 
+                                onClick={handleChange}
+                                required>
+                                    <option selected disabled value="">Position</option>
+                                    <option value="Stockholm">Stockholm</option>
+                                    <option value="Uppsala">Uppsala</option>
+                                    <option value="Gävle">Gävle</option>
                             </select>
                                 <div className="valid-feedback">You selected a position!</div>
                                 <div className="invalid-feedback">Please select a position!</div>
@@ -87,6 +99,8 @@ function SignUp() {
                                 name="gender" 
                                 id="male" 
                                 autoComplete="off" 
+                                value={inputs.gender || "Male"} 
+                                onClick={handleChange}
                                 required/>
                             <label className="btn btn-sm btn-outline-secondary" htmlFor="male">Male</label>
 
@@ -95,7 +109,9 @@ function SignUp() {
                                 className="btn-check" 
                                 name="gender" 
                                 id="female" 
-                                autoComplete="off" 
+                                autoComplete="off"
+                                value={inputs.gender || "Female"} 
+                                onClick={handleChange} 
                                 required/>
                             <label className="btn btn-sm btn-outline-secondary" htmlFor="female">Female</label>
 
@@ -104,7 +120,9 @@ function SignUp() {
                                 className="btn-check" 
                                 name="gender" 
                                 id="secret" 
-                                autoComplete="off" 
+                                autoComplete="off"
+                                value={inputs.gender || ""} 
+                                onClick={handleChange} 
                                 required/>
                             <label className="btn btn-sm btn-outline-secondary" htmlFor="secret">Secret</label>
                             <div className="valid-feedback mv-up">You selected a gender!</div>
@@ -124,7 +142,7 @@ function SignUp() {
                 
 
                             <div className="form-button mt-3">
-                                <button id="submit" type="submit" className="btn btn-primary">Register</button>
+                                <button id="submit" type="submit" onClick={handleSubmit} className="btn btn-primary">Register</button>
                             </div>
                         </form>
                     </div>
@@ -134,5 +152,7 @@ function SignUp() {
     </div>
   )
 }
+
+createRoot( document.getElementById('root')).render(<SignUp />);
 
 export default SignUp;
