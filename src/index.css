@@ -78,7 +78,7 @@ code {
 .signUpForm{
   grid-column: 2 / span 5;
 }
-/* SignUp heeeeeeeeeeeeeeeeeeeeeere*/
+/* SignUp heeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeere*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;900&display=swap');
 
 *, body {
@@ -91,7 +91,7 @@ code {
 
 html, body {
     height: 100%;
-    background-color: #fbfbf9;
+    background-color: #eee;
     overflow: hidden;
 }
 
@@ -125,8 +125,8 @@ body{
 }
 
 .form-content .form-items {
-    border: 3px solid #000;
-    background-color: #eee;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+    background-color: #fff;
     padding: 40px;
     display: inline-block;
     width: 100%;
@@ -179,6 +179,8 @@ body{
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
     margin-top: 16px;
+    border: 1px solid #000;
+  border-radius: 6px;
 }
 
 
@@ -187,6 +189,7 @@ body{
     outline: none;
     border: 0px;
      box-shadow: none;
+    margin-right: 1rem;
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active{
@@ -234,7 +237,9 @@ body{
    color: #2acc80;
 }
 
-/*NavBar heeeeeeeeeeeeeeeeeeeere*/
+
+
+/*NavBar heeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeere*/
 
 .header-blue {
   background:linear-gradient(135deg, #F2840C, #21a9af);
@@ -461,7 +466,7 @@ body{
 
 
 
-/*Slider heeeeeeeeeeeeeeeeeeeeere*/
+/*Slider heeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeere*/
 
 #Slider{
   background-color: #fbfbf9;
@@ -770,4 +775,88 @@ body{
 }
 .shadow-none {
   box-shadow: none!important;
+}
+
+
+
+#Bio{
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
+}
+
+
+/*Match Page heeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeere*/
+
+body{
+  background:#eee;    
+}
+a {
+  color: #f96332;
+}
+.m-t-5{
+  margin-top: 5px;   
+}
+.card {
+  background: #fff;
+  margin-bottom: 30px;
+  transition: .5s;
+  border: 0;
+  border-radius: .1875rem;
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  box-shadow: none;
+}
+.card .body {
+  font-size: 14px;
+  color: #424242;
+  padding: 20px;
+  font-weight: 400;
+}
+.profile-page .profile-header {
+  position: relative
+}
+
+.profile-page .profile-header .profile-image img {
+  border-radius: 50%;
+  width: 140px;
+  border: 3px solid #fff;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23)
+}
+
+.profile-page .profile-header .social-icon a {
+  margin: 0 5px
+}
+
+.profile-page .profile-sub-header {
+  min-height: 60px;
+  width: 100%
+}
+
+.profile-page .profile-sub-header ul.box-list {
+  display: inline-table;
+  table-layout: fixed;
+  width: 100%;
+  background: #eee
+}
+
+.profile-page .profile-sub-header ul.box-list li {
+  border-right: 1px solid #e0e0e0;
+  display: table-cell;
+  list-style: none
+}
+
+.profile-page .profile-sub-header ul.box-list li:last-child {
+  border-right: none
+}
+
+.profile-page .profile-sub-header ul.box-list li a {
+  display: block;
+  padding: 15px 0;
+  color: #424242
+}
+
+.container.profile-page{
+  margin-top: 1rem;
 }
