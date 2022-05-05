@@ -100,6 +100,8 @@ body{
 }
 
 
+
+
 .form-holder {
       display: flex;
       flex-direction: column;
@@ -183,6 +185,46 @@ body{
   border-radius: 6px;
 }
 
+#name {
+ 
+  
+  
+  border: 1px solid #f02849;
+  border-radius: 6px;
+}
+
+#nameText{
+  color: #f02849;
+}
+
+#email{ 
+  border: 1px solid #f02849;
+  border-radius: 6px;
+}
+
+#emailText{
+  color: #f02849;
+}
+
+#position{ 
+  border: 1px solid #f02849;
+  border-radius: 6px;
+}
+
+#positionText{
+  color: #f02849;
+}
+
+#password{
+  border: 1px solid #f02849;
+  border-radius: 6px;
+}
+
+#passwordText{
+  color: #f02849;
+}
+
+
 
 .btn-primary{
     background-color: #F2840C;
@@ -229,7 +271,7 @@ body{
     margin-bottom: 8px !important;
 }
 
-.invalid-feedback{
+.is-invalid{
     color: #ff606e;
 }
 
@@ -256,20 +298,21 @@ body{
 
 .header-blue .navbar {
   background:transparent;
-  padding-top:.75rem;
-  padding-bottom:.75rem;
+
   color:#fff;
   border-radius:0;
   box-shadow:none;
   border:none;
 }
 
-@media (min-width:768px) {
+/*   padding-top:.75rem;
+  padding-bottom:.75rem;
+  @media (min-width:768px) {
   .header-blue .navbar {
     padding-top:1rem;
     padding-bottom:1rem;
   }
-}
+} */
 
 .header-blue .navbar .navbar-brand {
   font-weight:bold;
@@ -283,6 +326,10 @@ body{
 .header-blue .navbar .navbar-collapse {
   border-top:1px solid rgba(255,255,255,0.3);
   margin-top:.5rem;
+}
+
+#layoutFixed{
+  position:inherit;
 }
 
 @media (min-width:768px) {
@@ -469,8 +516,12 @@ body{
 /*Slider heeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeere*/
 
 #Slider{
-  background-color: #fbfbf9;
+  background-color: #fff;
   margin-top:10%;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+  border-radius: 17px;
+  width: 75%;
+  padding: auto;
 }
 
 .main-timeline {
@@ -587,7 +638,7 @@ body{
 }
 
 .main-timeline .date-outer:before {
-  background: #fff;
+  background: #f1d5b72e;
   border: 2px solid #232323;
   left: -6px
 }
@@ -859,4 +910,111 @@ a {
 
 .container.profile-page{
   margin-top: 1rem;
+}
+
+
+/*Questions is heeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeere*/
+
+
+
+.mt-100 {
+  margin-top: 30px
+}
+
+
+
+/* .card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid #d2d2dc;
+  border-radius: 0
+}
+
+.card .card-body {
+  padding: 1.25rem 1.75rem
+}
+
+
+
+.card .card-title {
+  color: #000000;
+  margin-bottom: 0.625rem;
+  text-transform: capitalize;
+  font-size: 0.875rem;
+  font-weight: 500
+}
+
+.card .card-description {
+  margin-bottom: .875rem;
+  font-weight: 400;
+  color: #76838f
+} */
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border-radius: 10px;
+  margin-left: 3px;
+  margin-right: 3px;
+  
+}
+.card-body {
+  
+  padding: 1.25rem;
+  border-radius: 10px;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.16), 0 3px 3px rgba(0, 0, 0, 0.23)
+} 
+
+p {
+  font-size: 0.875rem;
+  margin-bottom: .5rem;
+  line-height: 1.5rem
+}
+
+
+label.check {
+cursor: pointer;
+}
+label.check input {
+position: absolute;
+top: 0;
+left: 0;
+visibility: hidden;
+pointer-events: none;
+}
+label.check span {
+padding: 7px 14px;
+  margin: 5px;
+  display: inline-block;
+  color: #000;
+  border-radius: 5px;
+  text-transform: uppercase;
+  border-radius: 5px;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.16), 0 3px 3px rgba(0, 0, 0, 0.23)
+  
+}
+label.check input:checked + span {
+  border-color: #F2840C;
+  background-color: #F2840C;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.16), 0 3px 3px rgba(0, 0, 0, 0.23)
+}
+
+@media (min-width: 768px) {
+  .card {
+    margin-left:.7rem;
+    margin-right:10px;
+  }
+  
 }

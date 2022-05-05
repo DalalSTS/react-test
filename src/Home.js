@@ -31,9 +31,10 @@ const Home = () => {
                             </div>
                         </div>
                         <div className="timeline-content">
-                            <h5 className="title">Visual Art &amp; Design</h5>
+                            <h5 className="title">SignUp</h5>
                             <p className="description">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur ex sit amet massa scelerisque scelerisque. Aliquam erat volutpat. Aenean interdum finibus efficitur. Praesent dapibus dolor felis, eu ultrices elit molestie.
+                            Click the Sign up button to create your account and be a part of the Support community! It’s free and will just take a moment of your time. 
+
                             </p>
                         </div>
                     </div>
@@ -51,9 +52,9 @@ const Home = () => {
                             </div>
                         </div>
                         <div className="timeline-content">
-                            <h5 className="title">Product Designer</h5>
+                            <h5 className="title">My Skills</h5>
                             <p className="description">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur ex sit amet massa scelerisque scelerisque. Aliquam erat volutpat. Aenean interdum finibus efficitur. Praesent dapibus dolor felis, eu ultrices elit molestie.
+                            Select which skills you possess and that you would consider teaching others! Don’t worry, you can of course update these later on. 
                             </p>
                         </div>
                     </div>
@@ -69,9 +70,9 @@ const Home = () => {
                             </div>
                         </div>
                         <div className="timeline-content">
-                            <h5 className="title">Web Designer</h5>
+                            <h5 className="title">Desired Skills</h5>
                             <p className="description">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur ex sit amet massa scelerisque scelerisque. Aliquam erat volutpat. Aenean interdum finibus efficitur. Praesent dapibus dolor felis, eu ultrices elit molestie.
+                            Choose which skills you’re interested in learning for now! 
                             </p>
                         </div>
                     </div>
@@ -89,9 +90,10 @@ const Home = () => {
                             </div>
                         </div>
                         <div className="timeline-content">
-                            <h5 className="title">Graphic Designer</h5>
+                            <h5 className="title">Interact</h5>
                             <p className="description">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur ex sit amet massa scelerisque scelerisque. Aliquam erat volutpat. Aenean interdum finibus efficitur. Praesent dapibus dolor felis, eu ultrices elit molestie.
+                            Browse suggested matches based on your skills profile. Establish contact with other Support members through the chat function!
+
                             </p>
                         </div>
                     </div>

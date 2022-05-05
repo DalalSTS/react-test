@@ -8,6 +8,7 @@ import SignUp from "./SignUp";
 import LogIn from "./LogIn";
 import MyProfile from './MyProfile';
 import MatchPage from './MatchPage';
+import Questions from './Questions';
 //import NoPage from "./pages/NoPage";
 
 export default function App() {
@@ -18,6 +19,7 @@ export default function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="SignUp" element={<SignUp />} />
+          <Route path="Questions" element={<Questions />} />
           <Route path="LogIn" element={<LogIn />} />
           <Route path='MyProfile' element={<MyProfile />} />
           <Route path='MatchPage' element={<MatchPage />} />

@@ -1,21 +1,63 @@
 import { Outlet, Link } from "react-router-dom";
 import { createRoot } from 'react-dom/client';
+import {useState} from 'react';
 
-const Layout = () => {
+function Layout(){
+  
+   const [LogedIn, setLogedIn] = useState(false);
+
+  // const onLogedIn = (LogedIn)=>{
+  //   if(LogedIn === false){
+  //     setSLogProf(false);
+  //   }
+  //   else if(LogedIn === true){
+  //     setSLogProf(true);
+  //   }
+  // }
   return (
     <>
-      <div>
+      <div id="layoutFixed">
         <div className="header-blue">
             <nav className="navbar navbar-dark navbar-expand-md navigation-clean-search">
                 <div className="container">
                   <a className="navbar-brand" href="/" >Support</a>
                   <button className="navbar-toggler" data-toggle="collapse" data-target="#navcol-1">
-                    <span className="sr-only">Toggle navigation</span>
+                    <span className="sr-only"></span>
                     <span className="navbar-toggler-icon"></span>
                     </button>
-                    <div className="collapse navbar-collapse"
+                    <div className="collapse navbar-collapse justify-content-end"
                         id="navcol-1">
-                        <ul className="nav navbar-nav">
+                        
+                        
+                          <div className={`${LogedIn && 'd-none'}`}>
+                          <span className="navbar-text"> 
+                          <a className="login" href="./LogIn" id="LogIn">Log In</a>
+                          </span>
+                          <a className="btn btn-light action-button" role="button" href="./SignUp">Sign Up</a>
+                          <a className="btn btn-light action-button" role="button" href="./Questions">Questions</a>
+                          </div>
+                          <div className={`${!LogedIn && 'd-none'}`}>
+                            <a className="navbar-text float-right" href="./MyProfile" >My Profile</a>
+                            <a className="navbar-brand float-right" href="./MatchPage" >MatchPage</a>
+                          </div>
+                        
+                        
+                    </div>
+                    
+
+                </div>
+            </nav>
+            
+        
+    </div>
+    </div>
+
+      <Outlet />
+    </>
+  )
+};
+
+{/* <ul className="nav navbar-nav">
                             <li className="nav-item" role="presentation">
                               <a className="nav-link active" href="#">Link</a>
                             </li>
@@ -35,27 +77,6 @@ const Layout = () => {
                                 </label>
                                 <input className="form-control search-field" type="search" name="search" id="search-field"/>
                             </div>
-                        </form>
-                        <div id="LogSign">
-                          <span className="navbar-text"> 
-                          <a className="login" href="./LogIn" id="LogIn">Log In</a>
-                          </span>
-                          <a className="btn btn-light action-button" role="button" href="./SignUp">Sign Up</a>
-                        </div>
-                    </div>
-                    <a className="navbar-text float-right" href="./MyProfile" >My Profile</a>
-                    <a className="navbar-brand float-right" href="./MatchPage" >MatchPage</a>
-
-                </div>
-            </nav>
-            
-        
-    </div>
-    </div>
-
-      <Outlet />
-    </>
-  )
-};
+                        </form> */}
 
 export default Layout;
