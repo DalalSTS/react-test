@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { createRoot } from 'react-dom/client';
+import axios from "axios";
 
 function LogIn() {
     let exist = true;
@@ -22,6 +23,9 @@ function LogIn() {
     
     const onSubmitHandler = (e)=>{
       e.preventDefault();
+      axios
+        .post("/api/users/login/", {"email": email, "password":password})
+      //.then((res) => console.log(res));
       if(1>0){
         setPasswordControllog(false);   
         setEmailControllog(false);
@@ -35,16 +39,26 @@ function LogIn() {
             setPasswordControllog(true);
         }
 
-        if(emailControllog == true){
+        if(emailControllog === true){
             setPasswordControllog(true);
         }
 
-        if(password !== password1){
-            setPasswordControllog(true);
-        }
+        // if(password !== password1){
+        //     setPasswordControllog(true);
+        // }
         
         else{
-           console.log({email, password});
+            console.log({email, password});
+            axios
+            .post("/api/users/login/", {"email": email, "password":password})
+            .then(function (res) {
+                localStorage.setItem("Token",res.data.token);
+                window.location.href= '/'
+                })
+            .catch(err => {
+                alert(err.response.data)});
+
+            
         }
         }
     }

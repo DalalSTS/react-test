@@ -2,9 +2,9 @@ import { Outlet, Link } from "react-router-dom";
 import { createRoot } from 'react-dom/client';
 import {useState} from 'react';
 
-function Layout(){
+function Layout(props){
   
-   const [LogedIn, setLogedIn] = useState(false);
+  //  const [LogedIn, setLogedIn] = useState(false);
 
   // const onLogedIn = (LogedIn)=>{
   //   if(LogedIn === false){
@@ -29,14 +29,14 @@ function Layout(){
                         id="navcol-1">
                         
                         
-                          <div className={`${LogedIn && 'd-none'}`}>
+                          <div className={`${props.loggedIn && 'd-none'}`}>
                           <span className="navbar-text"> 
                           <a className="login" href="./LogIn" id="LogIn">Log In</a>
                           </span>
                           <a className="btn btn-light action-button" role="button" href="./SignUp">Sign Up</a>
                           <a className="btn btn-light action-button" role="button" href="./Questions">Questions</a>
                           </div>
-                          <div className={`${!LogedIn && 'd-none'}`}>
+                          <div className={`${!props.loggedIn && 'd-none'}`}>
                             <a className="navbar-text float-right" href="./MyProfile" >My Profile</a>
                             <a className="navbar-brand float-right" href="./MatchPage" >MatchPage</a>
                           </div>

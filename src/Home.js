@@ -54,7 +54,7 @@ const Home = () => {
                         <div className="timeline-content">
                             <h5 className="title">My Skills</h5>
                             <p className="description">
-                            Select which skills you possess and that you would consider teaching others! Don’t worry, you can of course update these later on. 
+                            Select which skills you have and would consider teaching others! Don’t worry, you can update these later. 
                             </p>
                         </div>
                     </div>

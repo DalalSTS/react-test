@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { createRoot } from 'react-dom/client';
+import axios from "axios";
 
 
 
@@ -70,6 +71,9 @@ function SignUp(props) {
   //   }
   // }
   
+   
+  
+
   const onSubmitHandler = (e)=>{
     e.preventDefault();
     if(1>0){
@@ -95,9 +99,30 @@ function SignUp(props) {
       setEmailControll(false);
       setNameControll(false);
       console.log({name,email, password, position, gender});
+      axios
+      .post("/api/users/register/", {"email": email, "password":password, "location":position,"gender":"MA","first_name":name})
+      .then(function (res) {
+        localStorage.setItem("Token",res.data.token);
+        window.location.href= '/'
+        })
+        .catch(err => {
+          var things="";
+          for (const property in err.response.data){
+            things=`${things} ${property}:${err.response.data[property]}`;
+            
+          }
+          console.log(err)
+          alert(things)
+        });
+      
+      
+           
+      
+      
     }
     }
   }
+
 
 
   // const handleSubmit = (event) => {
@@ -164,9 +189,9 @@ function SignUp(props) {
                       value={position}
                       required>
                       <option selected disabled value="">Position</option>
-                      <option value="Stockholm">Stockholm</option>
-                      <option value="Uppsala">Uppsala</option>
-                      <option value="Gävle">Gävle</option>
+                      <option value="ST">Stockholm</option>
+                      <option value="UP">Uppsala</option>
+                      <option value="GO">Göteborg</option>
                     </select>
                     <div className={`${!PositionControll && 'd-none'}`} id= {`${PositionControll && 'nameText'}`}>Please select your position</div>
                     
